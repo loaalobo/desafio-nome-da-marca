@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio imersão dev_</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="conteiner">
+
+        <div class="cabeçalho">
+            <h1>Desafio das marcas</h1>
+            <h2>Qual é o meu nome?</h2>
+            <p>Preste atenção quando você for fazer a sua próxima lista de compras! <br/> Você vai perceber que, em vez de anotar itens como “fermento em pó” ou “curativo adesivo”, <br/> provavelmente escreverá o nome de marcas famosas. </p> 
+            <p style="font-family: 'Merriweather', serif;">Topa tentar advinhar o nome do produto que selecionamos?</p>
+        </div>
+
+        <div class="section">
+            <div class="desafio">
+                <p class="opções">
+                    <input type="radio" name="radproduct" id="miojo" checked>
+                    <label for="miojo">Miojo</label> <br/>
+                    <input type="radio" name="radproduct" id="nissin">
+                    <label for="nissin">Nissin</label> <br/>
+                    <input type="radio" name="radproduct" id="nissinmiojo">
+                    <label for="nissinmiojo">Nissin-miojo</label> <br/>
+                    <input type="radio" name="radproduct" id="macarraoInst">
+                    <label for="macaraoInst">Macarrão instantâneo</label> <br/>
+                    <input type="radio" name="radproduct" id="massaInst">
+                    <label for="massaInst">Massa instantânea</label> <br/>
+                    <input type="radio" name="radproduct" id="massayaksoba">
+                    <label for="massaYaksoba">Massa yaksoba</label> <br/>
+                </p>
+                <p class="botão"> 
+                    <input type="button" value="Conferir" onclick="conferir()"> 
+                </p>
+                <div class="resultado"> </div>
+            </div>
+            <div class="img"> 
+                <img src="https://static.vakinha.com.br/uploads/user/avatar/2475839/1581216363370.png?ims=225x225" alt="imagem macarrão instantâneo">
+            </div>
+        </div>
+    
+    <script>
+        function conferir() {
+            var produto = document.getElementsByName('radproduct')
+            var resposta = document.querySelector('div.resultado')
+            
+            if(produto[3].checked) {
+                resposta.innerHTML = '<p style="color:green"><strong>Parabéns! Você acertou =D</strong><p>'
+            } else {
+                resposta.innerHTML = '<p style="color:red"><strong>Que pena! Você errou =(</strong></p>'
+            }
+        }
+    </script>
+</body>
+</html>
